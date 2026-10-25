@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>명예의 전당 — HAIWRITE</title>
+  <link rel="icon" href="images/logo-mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sub.css">
+</head>
+<body class="page" data-page="hall">
+
+<header class="header" id="header">
+  <div class="inner header__inner">
+    <a href="index.html" class="brand" aria-label="HAIWRITE 홈">
+      <img src="images/logo-mark-white.png" alt="" class="brand__mark">
+      <span class="brand__name">HAIWRITE</span>
+    </a>
+    <nav class="gnb" id="gnb" aria-label="주요 메뉴">
+      <a href="index.html#about">소개</a>
+      <a href="works.html">작품 읽기</a>
+      <a href="hall.html" class="is-current" aria-current="page">명예의 전당</a>
+      <a href="index.html#process">창작법</a>
+      <a href="index.html#membership">이용 안내</a>
+      <a href="index.html#contact">문의</a>
+    </nav>
+    <div class="util">
+      <a href="#" class="util__link">로그인</a>
+      <a href="index.html#membership" class="util__write">작품 쓰기</a>
+      <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-head">
+    <span class="watermark" aria-hidden="true">HALL OF FAME</span>
+    <div class="inner">
+      <p class="label">HAIWRITE</p>
+      <h1 class="title">HALL OF FAME</h1>
+      <p class="sub">한 주 동안 독자들의 좋아요와 댓글을 가장 많이 받은 작품을 장르별로 한 편씩 선정합니다.</p>
+      <p class="sample-note">현재 보이는 선정작은 화면 구성을 위한 예시입니다</p>
+    </div>
+  </section>
+  <section class="hall">
+    <div class="inner">
+      <div class="hall-week">
+        <strong>이번 주 선정작</strong>
+        <span>참여 기간 2026.10.19(월) 00:00 – 10.25(일) 23:59 · 한국시간</span>
+      </div>
+      <div id="hall"></div>
+
+      <div class="rule">
+        <h3>선정 기준</h3>
+        <ul>
+          <li>장르별로 매주 1편을 선정합니다.</li>
+          <li>점수는 유효 좋아요 수와 댓글 작성자 수를 더해 계산합니다.</li>
+          <li>한 회원이 여러 댓글을 남겨도 점수에는 1회만 반영됩니다.</li>
+          <li>본인 작품에 남긴 좋아요와 댓글은 집계하지 않습니다.</li>
+          <li>마감 전에 취소된 좋아요와 삭제된 댓글은 제외됩니다.</li>
+          <li>동점일 경우 공동 선정하며, 관리자 확인 후 확정합니다.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="inner">
+    <ul class="footer__links">
+      <li><a href="index.html#about">플랫폼 소개</a></li>
+      <li><a href="#">이용약관</a></li>
+      <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+    </ul>
+    <div class="footer__row">
+      <img src="images/logo-white.png" alt="HAIWRITE" class="footer__logo">
+      <dl class="footer__info">
+        <div><dt>운영</dt><dd>HAIWRITE</dd></div>
+        <div><dt>문의</dt><dd>contact@haiwrite.com</dd></div>
+      </dl>
+      <p class="footer__copy">© 2026 HAIWRITE. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/pages.js"></script>
+</body>
+</html>
