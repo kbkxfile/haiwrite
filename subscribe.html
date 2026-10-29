@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>구독하기 — 하이라이트</title>
+  <meta name="description" content="일반회원 월 5,000원, 작가회원 월 20,000원.">
+  <meta name="theme-color" content="#102442">
+  <link rel="icon" href="images/logo-mark.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="subscribe">
+  <a href="#main" class="skip-link">본문 바로가기</a>
+  <div class="hero-band">
+    <picture>
+      <source media="(max-width: 640px)" srcset="images/hero-mobile.jpg">
+      <img src="images/hero.jpg" alt="">
+    </picture>
+  </div>
+
+  <main id="main">
+    <header class="page-head">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">홈</a> / 구독하기</p>
+        <span class="eyebrow">Subscribe</span>
+        <h1 class="sec-title">읽는 사람으로, 쓰는 사람으로</h1>
+        <p class="sec-desc">요금제를 비교하고 나에게 맞는 구독을 선택하세요.</p>
+      </div>
+    </header>
+
+    <div class="page-body">
+      <div class="container">
+        <section class="block">
+          <ol class="flow-steps" id="flow-steps" aria-label="구독 진행 단계">
+            <li>요금제 선택</li><li>가입 / 로그인</li><li>결제</li><li>구독 활성화</li>
+          </ol>
+        </section>
+        <section class="block" id="sub-main"></section>
+        <section class="block reveal">
+          <span class="block-num">COMPARE</span>
+          <h2 class="block-title">요금제 비교</h2>
+          <div class="table-wrap">
+            <table class="table">
+              <caption class="sr-only">일반회원과 작가회원 기능 비교</caption>
+              <thead><tr><th scope="col">기능</th><th scope="col">일반회원</th><th scope="col">작가회원</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">월 구독료</th><td>5,000원</td><td class="hl">20,000원</td></tr>
+                <tr><th scope="row">작품 감상</th><td>가능</td><td class="hl">가능</td></tr>
+                <tr><th scope="row">좋아요 · 댓글</th><td>가능</td><td class="hl">가능</td></tr>
+                <tr><th scope="row">작품 등록</th><td class="muted">불가</td><td class="hl">가능</td></tr>
+                <tr><th scope="row">본인 작품 관리</th><td class="muted">불가</td><td class="hl">가능</td></tr>
+                <tr><th scope="row">결제 및 구독 관리</th><td>가능</td><td class="hl">가능</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="compare-note">자동 결제·청구일·해지·환불 정책은 결제 서비스 약관 확정 후 안내됩니다.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>

@@ -3,203 +3,176 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HAIWRITE — 인간과 AI가 함께 쓰는 문학</title>
-  <meta name="description" content="HAIWRITE는 인간과 AI가 함께 창작하는 구독형 디지털 문학 플랫폼입니다. 마지막 문장은 사람이 씁니다.">
+  <title>하이라이트 — 생각이 문학이 되고, 문학이 연결이 됩니다</title>
+  <meta name="description" content="하이라이트는 HAI문학을 기반으로 작품을 발표하고 감상하며, 작가 발굴·웹진·교육·출판으로 확장하는 구독형 문학 플랫폼입니다.">
+  <meta name="theme-color" content="#102442">
   <link rel="icon" href="images/logo-mark.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
 </head>
-<body>
+<body data-page="home">
+  <a href="#main" class="skip-link">본문 바로가기</a>
 
-<!-- Header -->
-<header class="header" id="header">
-  <div class="inner header__inner">
-    <a href="#top" class="brand" aria-label="HAIWRITE 홈">
-      <img src="images/logo-mark-white.png" alt="" class="brand__mark">
-      <span class="brand__name">HAIWRITE</span>
-    </a>
-    <nav class="gnb" id="gnb" aria-label="주요 메뉴">
-      <a href="#about">소개</a>
-      <a href="works.html">작품 읽기</a>
-      <a href="hall.html">명예의 전당</a>
-      <a href="#process">창작법</a>
-      <a href="#membership">이용 안내</a>
-      <a href="#contact">문의</a>
-    </nav>
-    <div class="util">
-      <a href="#" class="util__link">로그인</a>
-      <a href="#membership" class="util__write">작품 쓰기</a>
-      <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span></button>
-    </div>
+  <!-- 01 대표 이미지: 높이 100px, 손끝·물결 교차 지점에 초점 -->
+  <div class="hero-band">
+    <picture>
+      <source media="(max-width: 640px)" srcset="images/hero-mobile.jpg">
+      <img src="images/hero.jpg" alt="금빛 물결에 손끝이 닿아 동그랗게 번지는 장면">
+    </picture>
   </div>
-</header>
 
-<main id="top">
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero__bg" style="background-image:url('images/hero.jpg')"></div>
-    <div class="inner hero__content">
-      <p class="hero__eyebrow">Human Thinks, AI Expands, We Write.</p>
-      <h1 class="hero__title">인간의 생각에서 시작해, <br>함께 쓰는 문학</h1>
-      <p class="hero__desc">당신의 경험과 질문이 AI와 만나 더 넓은 이야기로 이어집니다. <br><em>마지막 문장은 사람이 씁니다.</em></p>
-      <div class="hero__actions">
-        <a href="works.html" class="more more--light">작품 둘러보기 <i class="arrow"></i></a>
-        <a href="#membership" class="more more--ghost">작가로 참여하기 <i class="arrow"></i></a>
+  <main id="main">
+    <!-- 02 인트로 카피 -->
+    <section class="section intro">
+      <div class="container intro-grid">
+        <div class="reveal">
+          <span class="eyebrow">Human Thinks, AI Expands, We Write.</span>
+          <h1 class="intro-title">생각이 문학이 되고,<br>문학이 새로운 <em>연결</em>이 됩니다.</h1>
+        </div>
+        <div class="intro-body reveal d1">
+          <p>하이라이트는 HAI문학을 기반으로 한 구독형 문학 공유 플랫폼입니다. 작가는 작품을 발표하고, 독자는 글과 이미지, 소리와 영상으로 문학을 만납니다.</p>
+          <p>인간의 감성과 AI의 가능성이 만나는 곳에서, 당신의 공감이 새로운 작가를 발견합니다.</p>
+          <div class="btn-row">
+            <a href="works.html" class="btn btn-deep">작품 감상하기 <svg viewBox="0 0 24 24"><path d="M4 12h15M14 7l5 5-5 5"/></svg></a>
+            <a href="about.html" class="btn btn-line">하이라이트 소개</a>
+          </div>
+        </div>
       </div>
-    </div>
-    <a href="#about" class="hero__scroll" aria-label="아래로 스크롤"><span>Scroll</span></a>
-  </section>
+    </section>
 
-  <!-- About -->
-  <section class="section about" id="about">
-    <span class="watermark" aria-hidden="true">HAIWRITE</span>
-    <div class="inner about__grid">
-      <div class="about__visual reveal">
-        <img src="images/logo.png" alt="HAIWRITE 로고 — Human Thinks, AI Expands, We Write.">
+    <!-- 03 명예의 전당 -->
+    <section class="section bg-deep hall-feature" aria-labelledby="hall-title">
+      <span class="watermark" aria-hidden="true">HIGHLIGHT</span>
+      <div class="container hall-grid" id="hall-feature"></div>
+    </section>
+
+    <!-- 04 지금 인기 작품 -->
+    <section class="section" aria-labelledby="popular-title">
+      <div class="container">
+        <div class="sec-head split reveal">
+          <div>
+            <span class="eyebrow">Popular Now</span>
+            <h2 class="sec-title" id="popular-title">지금 인기 작품</h2>
+            <p class="sec-desc">좋아요와 댓글을 합산한 독자 반응 순입니다.</p>
+          </div>
+          <div class="tabs" role="tablist" aria-label="장르 선택" id="popular-tabs"></div>
+        </div>
+        <div class="work-grid" id="popular-grid" role="tabpanel"></div>
+        <div class="center-more reveal"><a href="works.html" class="text-link">전체 작품 보기 <svg viewBox="0 0 24 24"><path d="M4 12h15M14 7l5 5-5 5"/></svg></a></div>
       </div>
-      <div class="about__text reveal">
-        <p class="label">HAIWRITE</p>
-        <h2 class="title">ABOUT</h2>
-        <p class="lead">HAIWRITE는 인간과 AI가 함께 창작하는<br>구독형 디지털 문학 플랫폼입니다.</p>
-        <p>인간의 경험과 질문에서 출발해 AI와 함께 사유를 확장하고, 인간의 감성과 책임으로 완성합니다. 작품의 결과뿐 아니라 작가의 의도와 AI 협업 과정까지 함께 읽히는 문학을 지향합니다.</p>
-        <blockquote class="quote">“마지막 문장은 사람이 쓴다.”<cite>— 신수필(HAI Essay) 선언</cite></blockquote>
-        <a href="#process" class="more">Read more <i class="arrow"></i></a>
+    </section>
+
+    <!-- 05 문학의 네 가지 감상법 -->
+    <section class="section bg-deep-2 ways" aria-labelledby="ways-title">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="eyebrow">Four Ways</span>
+          <h2 class="sec-title" id="ways-title">문학의 네 가지 감상법</h2>
+          <p class="sec-desc">읽고, 보고, 듣는 문학. 하이라이트의 작품은 네 가지 형식으로 당신을 찾아갑니다.</p>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Process : H-A-I -->
-  <section class="section process" id="process">
-    <div class="inner">
-      <p class="label">HAIWRITE</p>
-      <h2 class="title">H-A-I PROCESS</h2>
-      <p class="sub">인간의 의도, AI의 확장, 인간의 완성. 세 단계로 한 편의 글을 씁니다.</p>
-    </div>
-    <div class="timeline" aria-hidden="true">
-      <div class="inner timeline__dots"><i class="on"></i><i></i><i></i></div>
-    </div>
-    <div class="inner process__cards">
-      <article class="pcard is-active" data-step="0" tabindex="0">
-        <span class="pcard__letter">H</span>
-        <h3>Human Intent</h3>
-        <p class="pcard__ko">인간의 의도</p>
-        <p class="pcard__desc">어떤 경험이나 질문에서 이 글을 시작했나요? 모든 작품은 사람의 이야기에서 출발합니다.</p>
-      </article>
-      <article class="pcard" data-step="1" tabindex="0">
-        <span class="pcard__letter">A</span>
-        <h3>AI Expands</h3>
-        <p class="pcard__ko">AI와의 확장</p>
-        <p class="pcard__desc">AI는 자료 탐색, 구성, 표현을 도우며 생각의 폭을 넓힙니다. 협업의 맥락은 작품과 함께 공개됩니다.</p>
-      </article>
-      <article class="pcard" data-step="2" tabindex="0">
-        <span class="pcard__letter">I</span>
-        <h3>Integrity</h3>
-        <p class="pcard__ko">인간의 완성</p>
-        <p class="pcard__desc">무엇을 선택하고 어떻게 고칠지는 작가가 정합니다. 자신의 언어로, 책임 있게 완성합니다.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- Works -->
-  <section class="section works" id="works">
-    <div class="inner works__grid">
-      <div class="works__intro reveal">
-        <p class="label">HAIWRITE</p>
-        <h2 class="title">WORKS</h2>
-        <h3 class="works__current" id="genreName">신수필</h3>
-        <p class="works__desc" id="genreDesc">인간과 AI의 협업 철학을 보여주는 HAIWRITE의 대표 장르</p>
-        <a href="works.html?genre=essay" class="more" id="genreLink">작품 읽기 <i class="arrow"></i></a>
-        <p class="works__note">모든 작품은 편집진의 검수를 거쳐 게시됩니다.</p>
+      <div class="ways-line" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+      <div class="container">
+        <div class="ways-grid" id="ways-grid"></div>
       </div>
-      <ul class="genres reveal" id="genres">
-        <li class="genre is-active" data-id="essay" data-desc="인간과 AI의 협업 철학을 보여주는 HAIWRITE의 대표 장르">
-          <span class="genre__no">01</span><span class="genre__ko">신수필</span><span class="genre__en">HAI Essay</span>
-        </li>
-        <li class="genre" data-id="dica" data-desc="한 장의 사진과 짧은 시가 만나 순간을 기록하는 장르">
-          <span class="genre__no">02</span><span class="genre__ko">디카시</span><span class="genre__en">Dica-Poem</span>
-        </li>
-        <li class="genre" data-id="photo" data-desc="사진과 산문이 함께 장면과 사유를 펼쳐 보이는 장르">
-          <span class="genre__no">03</span><span class="genre__ko">포토에세이</span><span class="genre__en">Photo Essay</span>
-        </li>
-        <li class="genre" data-id="smart" data-desc="휴대전화 화면 안에서 완결되는 짧고 밀도 높은 소설">
-          <span class="genre__no">04</span><span class="genre__ko">스마트소설</span><span class="genre__en">Smart Fiction</span>
-        </li>
-        <li class="genre" data-id="media" data-desc="목소리와 영상으로 듣고 보는 새로운 형식의 문학">
-          <span class="genre__no">05</span><span class="genre__ko">음성·영상문학</span><span class="genre__en">Audio &amp; Video</span>
-        </li>
-      </ul>
-    </div>
-  </section>
+    </section>
 
-  <!-- Membership -->
-  <section class="section membership" id="membership">
-    <div class="inner">
-      <p class="label">HAIWRITE</p>
-      <h2 class="title">MEMBERSHIP</h2>
-      <p class="sub">읽는 사람도, 쓰는 사람도. 나에게 맞는 구독을 선택하세요.</p>
-      <div class="plans">
-        <article class="plan reveal">
-          <p class="plan__type">Reader</p>
-          <h3>독자회원</h3>
-          <p class="plan__price"><strong>5,000</strong>원 <span>/ 월</span></p>
-          <ul>
-            <li>구독 대상 작품 전체 열람</li>
-            <li>좋아요 · 댓글로 감상 나누기</li>
-            <li>관심 작품 저장</li>
-          </ul>
-          <a href="#" class="more more--line">독자로 구독하기 <i class="arrow"></i></a>
-        </article>
-        <article class="plan plan--writer reveal">
-          <p class="plan__type">Writer</p>
-          <h3>작가회원</h3>
-          <p class="plan__price"><strong>20,000</strong>원 <span>/ 월</span></p>
-          <ul>
-            <li>독자회원의 모든 기능 포함</li>
-            <li>작품 제출과 편집진 검수 의견 확인</li>
-            <li>나만의 작가 페이지</li>
-          </ul>
-          <a href="#" class="more more--light">작가로 참여하기 <i class="arrow"></i></a>
-        </article>
+    <!-- 06 HAI Essay 티저 -->
+    <section class="section hai-teaser" aria-labelledby="hai-title">
+      <div class="container">
+        <div class="sec-head center reveal">
+          <span class="eyebrow">HAI Essay · 신수필</span>
+          <h2 class="sec-title" id="hai-title">마지막 문장은 사람이 씁니다.</h2>
+          <p class="sec-desc">인간의 의도에서 출발해 AI의 실행으로 넓히고, 저자의 감동적 터치로 완성하는 미래형 수필 창작 모델입니다.</p>
+        </div>
+        <ol class="hai-steps">
+          <li class="hai-step reveal">
+            <span class="hai-letter">H</span>
+            <span class="hai-en">Human Intent</span>
+            <h3>인간의 의도</h3>
+            <p>경험·문제의식·방향, 기획의 주도권은 사람에게</p>
+          </li>
+          <li class="hai-step reveal d1">
+            <span class="hai-letter">A</span>
+            <span class="hai-en">AI Action</span>
+            <h3>AI의 실행</h3>
+            <p>초안·구조화·정리, 반복 작업을 빠르고 넓게</p>
+          </li>
+          <li class="hai-step reveal d2">
+            <span class="hai-letter">I</span>
+            <span class="hai-en">Impressive Touch</span>
+            <h3>감동적 터치</h3>
+            <p>저자의 체온과 고유한 문체, 최종 판단으로 완성</p>
+          </li>
+        </ol>
+        <div class="center-more reveal"><a href="about.html#hai-essay" class="btn btn-deep">하이 에세이 자세히 알아보기 <svg viewBox="0 0 24 24"><path d="M4 12h15M14 7l5 5-5 5"/></svg></a></div>
       </div>
-      <p class="plans__note">작가 구독료는 투고와 검수 서비스 이용 비용이며, 모든 원고의 게시를 보장하지 않습니다. 검토에는 약 3~5일이 소요됩니다.</p>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact -->
-  <section class="contact" id="contact">
-    <div class="contact__bg" style="background-image:url('images/hero.jpg')"></div>
-    <div class="inner contact__content reveal">
-      <p class="label">HAIWRITE</p>
-      <h2 class="title">CONTACT</h2>
-      <p>작품 투고, 제휴, 이용 문의를 기다립니다.</p>
-      <a href="#" class="more more--light">Contact us <i class="arrow"></i></a>
-    </div>
-  </section>
-</main>
+    <!-- 07 웹진 -->
+    <section class="section bg-deep webzine-feature" aria-labelledby="webzine-title">
+      <span class="watermark" aria-hidden="true">WEBZINE</span>
+      <div class="container webzine-grid" id="webzine-feature"></div>
+    </section>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="inner">
-    <ul class="footer__links">
-      <li><a href="#about">플랫폼 소개</a></li>
-      <li><a href="#">이용약관</a></li>
-      <li><a href="#"><strong>개인정보처리방침</strong></a></li>
-    </ul>
-    <div class="footer__row">
-      <img src="images/logo-white.png" alt="HAIWRITE" class="footer__logo">
-      <dl class="footer__info">
-        <div><dt>운영</dt><dd>HAIWRITE</dd></div>
-        <div><dt>문의</dt><dd>contact@haiwrite.com</dd></div>
-      </dl>
-      <p class="footer__copy">© 2026 HAIWRITE. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+    <!-- 08 아카데미 -->
+    <section class="section bg-paper" aria-labelledby="academy-title">
+      <div class="container">
+        <div class="sec-head split reveal">
+          <div>
+            <span class="eyebrow">Academy</span>
+            <h2 class="sec-title" id="academy-title">쓰는 힘을 함께 기르다</h2>
+            <p class="sec-desc">장르별 창작과 AI 글쓰기 수업. 신청은 Google Forms로 접수합니다.</p>
+          </div>
+          <a href="academy.html" class="text-link">아카데미 전체 보기 <svg viewBox="0 0 24 24"><path d="M4 12h15M14 7l5 5-5 5"/></svg></a>
+        </div>
+        <div class="course-grid" id="course-grid"></div>
+      </div>
+    </section>
 
-<script src="js/main.js"></script>
+    <!-- 09 출판 안내 -->
+    <section class="section bg-ivory-2" aria-labelledby="publish-title">
+      <div class="container publish-grid">
+        <div class="reveal">
+          <span class="eyebrow">Publishing</span>
+          <h2 class="sec-title" id="publish-title">당신의 글이<br>책으로 이어지도록</h2>
+          <p class="sec-desc">원고 준비부터 출판 방향까지 한국디지털문인협회의 출판 프로세스로 함께 검토합니다.</p>
+          <div class="btn-row"><a href="publish.html" class="btn btn-deep">출판 상담 신청 <svg viewBox="0 0 24 24"><path d="M4 12h15M14 7l5 5-5 5"/></svg></a></div>
+        </div>
+        <div class="path-cards">
+          <a href="publish.html#no-manuscript" class="path-card reveal d1">
+            <span class="path-num">A</span>
+            <h3>원고가 없는 분</h3>
+            <p>기획 회의 → 집필 방법 논의 → 원고 작성 → 출판 방향 설정 → 출판 방법 협의</p>
+          </a>
+          <a href="publish.html#has-manuscript" class="path-card reveal d2">
+            <span class="path-num">B</span>
+            <h3>원고가 있는 분</h3>
+            <p>원고 검토 및 분석 → 출판 방향 설정 → 출판 방법 협의</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 구독 안내 -->
+    <section class="section bg-deep-2 subscribe-band" aria-labelledby="sub-title">
+      <div class="container">
+        <div class="sec-head center reveal">
+          <span class="eyebrow">Subscribe</span>
+          <h2 class="sec-title" id="sub-title">읽는 사람으로, 쓰는 사람으로</h2>
+          <p class="sec-desc">한 달에 한 번, 문학을 곁에 두는 가장 쉬운 방법.</p>
+        </div>
+        <div class="plan-grid" id="plan-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
 </body>
 </html>

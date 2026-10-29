@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>출판 — 하이라이트</title>
+  <meta name="description" content="원고 준비부터 출판 방향까지 함께 검토합니다.">
+  <meta name="theme-color" content="#102442">
+  <link rel="icon" href="images/logo-mark.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="publish">
+  <a href="#main" class="skip-link">본문 바로가기</a>
+  <div class="hero-band">
+    <picture>
+      <source media="(max-width: 640px)" srcset="images/hero-mobile.jpg">
+      <img src="images/hero.jpg" alt="">
+    </picture>
+  </div>
+
+  <main id="main">
+    <header class="page-head">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">홈</a> / 출판</p>
+        <span class="eyebrow">Publishing</span>
+        <h1 class="sec-title">당신의 글이 책으로 이어지도록</h1>
+        <p class="sec-desc">원고 준비부터 출판 방향까지 함께 검토</p>
+      </div>
+    </header>
+
+    <div class="page-body">
+      <div class="container">
+        <section class="block reveal">
+          <p class="lead">하이라이트의 출판 지원은 한국디지털문인협회의 출판 프로세스로 진행됩니다. 원고 보유 여부에 따라 아래 두 가지 경로 중 하나를 선택해 상담을 신청하세요.</p>
+        </section>
+        <section class="block two-col" style="align-items:stretch">
+          <div class="path-panel reveal" id="no-manuscript">
+            <h3><span class="path-num">A</span>원고가 없는 분</h3>
+            <ol class="flow">
+              <li><strong>기획 회의</strong><span>쓰고 싶은 이야기와 책의 방향을 함께 정리합니다.</span></li>
+              <li><strong>집필 방법 논의</strong><span>작가 연결 또는 아카데미 수강 중 맞는 방법을 찾습니다.</span></li>
+              <li><strong>원고 작성</strong><span>계획에 따라 원고를 집필합니다.</span></li>
+              <li><strong>출판 방향 설정</strong><span>장르·분량·형태(종이책/전자책)를 정합니다.</span></li>
+              <li><strong>출판 방법 협의</strong><span>일정과 진행 방식을 협의합니다.</span></li>
+            </ol>
+          </div>
+          <div class="path-panel reveal d1" id="has-manuscript">
+            <h3><span class="path-num">B</span>원고가 있는 분</h3>
+            <ol class="flow">
+              <li><strong>원고 검토 및 분석</strong><span>원고의 완성도와 특징을 살펴봅니다.</span></li>
+              <li><strong>출판 방향 설정</strong><span>독자층과 출판 형태를 정합니다.</span></li>
+              <li><strong>출판 방법 협의</strong><span>일정과 진행 방식을 협의합니다.</span></li>
+            </ol>
+          </div>
+        </section>
+        <section class="block reveal" id="consult">
+          <span class="block-num">CONSULTING</span>
+          <h2 class="block-title">출판 상담 신청</h2>
+          <form class="form-card" id="consult-form" novalidate>
+            <div class="field">
+              <span>원고 보유 여부</span>
+              <div class="radio-row">
+                <label><input type="radio" name="has" value="no" checked> 원고가 없습니다</label>
+                <label><input type="radio" name="has" value="yes"> 원고가 있습니다</label>
+              </div>
+            </div>
+            <label class="field"><span>이름</span><input class="input" name="name" required autocomplete="name"></label>
+            <label class="field"><span>연락처 (이메일 또는 전화)</span><input class="input" name="contact" required></label>
+            <label class="field"><span>상담 내용</span><textarea class="textarea" name="message" rows="5" placeholder="쓰고 싶은 책, 현재 원고 상태 등을 자유롭게 적어 주세요."></textarea></label>
+            <p class="hint" style="margin-bottom:20px">시범 화면입니다. 입력 내용은 전송되지 않으며, 실제 상담 접수처와 개인정보 수집 동의는 운영 확정 후 연결됩니다.</p>
+            <button type="submit" class="btn btn-deep">상담 신청하기 <svg viewBox="0 0 24 24"><path d="M4 12h15M14 7l5 5-5 5"/></svg></button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>웹진 — 하이라이트</title>
+  <meta name="description" content="연 2회 선정 작가와 작품을 소개하는 하이라이트 웹진.">
+  <meta name="theme-color" content="#102442">
+  <link rel="icon" href="images/logo-mark.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="webzine">
+  <a href="#main" class="skip-link">본문 바로가기</a>
+  <div class="hero-band">
+    <picture>
+      <source media="(max-width: 640px)" srcset="images/hero-mobile.jpg">
+      <img src="images/hero.jpg" alt="">
+    </picture>
+  </div>
+
+  <main id="main">
+    <header class="page-head">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">홈</a> / 웹진</p>
+        <span class="eyebrow">Webzine</span>
+        <h1 class="sec-title">좋은 작품을 한 권의 기억으로</h1>
+        <p class="sec-desc">연 2회, 선정 작가와 작품을 소개하는 웹진</p>
+      </div>
+    </header>
+
+    <div class="page-body">
+      <div class="container">
+        <section class="block" id="zine-latest"></section>
+        <section class="block">
+          <span class="block-num">ARCHIVE</span>
+          <h2 class="block-title">전체 호</h2>
+          <div class="issue-list" id="zine-archive"></div>
+        </section>
+        <section class="block reveal">
+          <span class="block-num">PUBLISHING CYCLE</span>
+          <h2 class="block-title">발간 안내</h2>
+          <div class="steps-inline">
+            <span>작가회원 작품 게시</span><i>→</i><span>독자 반응</span><i>→</i><span>월별 우수작 선정</span><i>→</i><span>웹진 수록 (연 2회)</span>
+          </div>
+          <p class="compare-note">작품을 웹진에 다시 수록할 때에는 작가의 이용 허락을 받습니다. 모바일 친화형·참여형 앱진(Appzine)은 장기 확장 방향으로 준비 중입니다.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>

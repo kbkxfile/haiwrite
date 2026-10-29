@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>로그인 — 하이라이트</title>
+  <meta name="description" content="하이라이트 로그인 · 회원가입">
+  <meta name="theme-color" content="#102442">
+  <link rel="icon" href="images/logo-mark.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="login">
+  <a href="#main" class="skip-link">본문 바로가기</a>
+  <div class="hero-band">
+    <picture>
+      <source media="(max-width: 640px)" srcset="images/hero-mobile.jpg">
+      <img src="images/hero.jpg" alt="">
+    </picture>
+  </div>
+
+  <main id="main">
+    <div class="page-body">
+      <div class="container">
+        <div class="auth-wrap">
+          <div class="auth-side">
+            <span class="eyebrow">Welcome</span>
+            <h2>생각이 문학이 되고,<br>문학이 연결이 됩니다.</h2>
+            <p>로그인하고 작품에 마음을 남겨 보세요.</p>
+          </div>
+          <div class="auth-main">
+            <h1 class="sr-only">로그인</h1>
+            <div class="tabs" role="tablist" aria-label="로그인 또는 회원가입">
+              <button type="button" class="tab" role="tab" data-mode="login" aria-selected="true">로그인</button>
+              <button type="button" class="tab" role="tab" data-mode="join" aria-selected="false">회원가입</button>
+            </div>
+            <form id="auth-form" novalidate>
+              <label class="field join-only" hidden><span>이름 (필명)</span><input class="input" name="name" autocomplete="nickname"></label>
+              <label class="field"><span>이메일</span><input class="input" type="email" name="email" required autocomplete="email"></label>
+              <label class="field"><span>비밀번호</span><input class="input" type="password" name="password" required autocomplete="current-password"></label>
+              <p class="notice" style="margin:8px 0 20px">시범 화면입니다. 입력한 정보는 서버로 전송되지 않으며, 이 브라우저에만 로그인 상태가 저장됩니다.</p>
+              <button type="submit" class="btn btn-deep" id="auth-submit">로그인</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>
