@@ -104,7 +104,7 @@ const PAGES = {
     })();
 
     root.innerHTML = `
-      <p class="breadcrumb"><a href="index.html">홈</a> / <a href="works.html">작품 감상</a> / <a href="works.html?genre=${w.genre}">${g.name}</a></p>
+      <p class="breadcrumb"><a href="highlights.html">홈</a> / <a href="works.html">작품 감상</a> / <a href="works.html?genre=${w.genre}">${g.name}</a></p>
       <header class="reader-head">
         <span class="tag">${g.name}${w.hai ? ' · HAI Essay' : ''}</span>
         <h1 class="reader-title">${esc(w.title)}</h1>
@@ -140,7 +140,7 @@ const PAGES = {
       const samples = w.mine ? [] : SAMPLE_COMMENTS.slice(0, Math.min(3, w.comments));
       $('#c-list').innerHTML = [...mine, ...samples].map(c =>
         `<li><div class="c-head"><strong>${esc(c.name)}</strong><span>${c.date ? fmtDate(c.date) : ''}</span></div><p>${esc(c.text)}</p></li>`).join('')
-        + (w.comments > samples.length ? `<li class="muted" style="font-size:14px">외 ${w.comments - samples.length}개의 댓글</li>` : '');
+        + (w.comments > samples.length ? `<li class="muted" style="font-size:17px">외 ${w.comments - samples.length}개의 댓글</li>` : '');
     };
     sync();
 
@@ -237,7 +237,7 @@ const PAGES = {
       return `<a href="work.html?id=${x.id}" class="hall-item reveal">
         <span class="month">${h.month}</span>
         <h3>${esc(x.title)}</h3>
-        <p class="muted" style="font-size:14px">${esc(x.author)} · ${GENRES[x.genre].name}</p>
+        <p class="muted" style="font-size:17px">${esc(x.author)} · ${GENRES[x.genre].name}</p>
         <q>${esc(h.quote)}</q>
         <p class="note">${h.note}</p>
       </a>`;
@@ -355,7 +355,7 @@ const PAGES = {
       </div>
       <aside class="summary">
         <span class="eyebrow">Order</span>
-        <h3 style="font-family:var(--serif);font-size:22px">${p.name} 구독</h3>
+        <h3 style="font-family:var(--serif);font-size:26.5px">${p.name} 구독</h3>
         <dl>
           <div><dt>회원</dt><dd>${esc(u.name)}</dd></div>
           <div><dt>결제 주기</dt><dd>매월</dd></div>
@@ -399,7 +399,7 @@ const PAGES = {
       const name = (mode === 'join' && form.elements.name.value.trim()) || email.split('@')[0];
       auth.login(name, email);
       const next = param('next');
-      location.href = next && /^[\w.-]+\.html(\?.*)?$/.test(next) ? next : 'index.html';
+      location.href = next && /^[\w.-]+\.html(\?.*)?$/.test(next) ? next : 'highlights.html';
     });
   },
 
@@ -416,15 +416,15 @@ const PAGES = {
       <aside class="my-card">
         <div class="avatar" aria-hidden="true">${esc(u.name.slice(0, 1))}</div>
         <h2>${esc(u.name)}</h2>
-        <p style="font-size:14px;opacity:.7">${esc(u.email)}</p>
+        <p style="font-size:17px;opacity:.7">${esc(u.email)}</p>
         <span class="plan-tag">${u.plan ? PLANS[u.plan].name + ' · ' + won(PLANS[u.plan].price) + '/월' : '구독 전'}</span>
-        <p style="font-size:14px;opacity:.75">남긴 댓글 ${commentCount}개 · 좋아요 ${likedWorks.length}개</p>
+        <p style="font-size:17px;opacity:.75">남긴 댓글 ${commentCount}개 · 좋아요 ${likedWorks.length}개</p>
         <a href="subscribe.html" class="btn btn-ivory">${u.plan ? '구독 관리' : '구독하기'}</a>
         ${u.plan === 'writer' ? `<a href="write.html" class="btn btn-gold">작품 등록</a>` : ''}
       </aside>
       <div>
         ${u.plan === 'writer' ? `<section class="my-section">
-          <h3>내 작품 <a href="write.html" class="text-link" style="font-family:var(--sans);font-size:15px">새 작품 등록 ${ICONS.arrow}</a></h3>
+          <h3>내 작품 <a href="write.html" class="text-link" style="font-family:var(--sans);font-size:18px">새 작품 등록 ${ICONS.arrow}</a></h3>
           ${mine.length ? `<div class="work-grid">${mine.map(workCard).join('')}</div>` : '<p class="genre-intro">아직 등록한 작품이 없습니다.</p>'}
         </section>` : ''}
         <section class="my-section">
@@ -469,11 +469,11 @@ const PAGES = {
           <p class="hint">시범 화면에서는 파일이 업로드되지 않습니다. 실제 서비스에서는 업로드 진행률과 실패 안내가 표시됩니다.</p>
         </label>
         <label class="field"><span>사진 설명 / 캡션 (선택)</span><input class="input" name="caption" value="${esc(v.caption || '')}"></label>
-        <label class="field" style="display:flex;gap:10px;align-items:flex-start;font-size:15px">
+        <label class="field" style="display:flex;gap:10px;align-items:flex-start;font-size:18px">
           <input type="checkbox" name="hai" ${v.hai ? 'checked' : ''} style="margin-top:6px;accent-color:var(--deep)">
           <span style="font-weight:400;margin:0">HAI Essay(신수필) 작품으로 표시합니다 — AI와의 협업 범위를 독자에게 알립니다.</span>
         </label>
-        <label class="field" style="display:flex;gap:10px;align-items:flex-start;font-size:15px">
+        <label class="field" style="display:flex;gap:10px;align-items:flex-start;font-size:18px">
           <input type="checkbox" name="rights" required style="margin-top:6px;accent-color:var(--deep)">
           <span style="font-weight:400;margin:0">업로드하는 글·이미지·음성·영상에 대한 권리를 보유하고 있음을 확인합니다. (필수)</span>
         </label>

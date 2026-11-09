@@ -158,7 +158,7 @@ function renderHeader() {
   header.className = 'site-header';
   header.innerHTML = `
     <div class="header-inner">
-      <a href="index.html" class="brand" aria-label="하이라이트 홈">
+      <a href="highlights.html" class="brand" aria-label="하이라이트 홈">
         <img src="images/logo-mark-white.png" alt="" width="52" height="30">
         <span class="brand-text"><strong>하이라이트</strong><small>HAIWRITE</small></span>
       </a>
@@ -186,7 +186,7 @@ function renderHeader() {
   });
   $$('[data-logout]', header).forEach(b => b.addEventListener('click', () => {
     auth.logout();
-    location.href = 'index.html';
+    location.href = 'highlights.html';
   }));
 
   const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
