@@ -159,8 +159,7 @@ function renderHeader() {
   header.innerHTML = `
     <div class="header-inner">
       <a href="highlights.html" class="brand" aria-label="하이라이트 홈">
-        <img src="images/logo-mark-white.png" alt="" width="52" height="30">
-        <span class="brand-text"><strong>하이라이트</strong><small>HAIWRITE</small></span>
+        <img src="images/logo-wide-white.png" alt="HAIWRITE" width="204" height="34">
       </a>
       <nav class="gnb" aria-label="주 메뉴">${links}</nav>
       <div class="util">${util}</div>

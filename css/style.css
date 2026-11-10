@@ -71,10 +71,7 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round
   display: flex; align-items: center; gap: 32px;
 }
 .brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
-.brand img { width: 52px; height: auto; }
-.brand-text { display: flex; flex-direction: column; line-height: 1.15; }
-.brand-text strong { font-family: var(--serif); font-size: 24px; font-weight: 700; letter-spacing: .02em; }
-.brand-text small { font-size: 12px; letter-spacing: .32em; color: var(--gold); }
+.brand img { width: auto; height: 34px; }
 
 .gnb { flex: 1; display: flex; justify-content: center; gap: 4px; }
 .gnb a {
@@ -320,8 +317,7 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round
 @media (max-width: 640px) {
   :root { --gutter: 16px; --header-h: 64px; }
   body { font-size: 18.5px; }
-  .brand img { width: 44px; }
-  .brand-text strong { font-size: 21.5px; }
+  .brand img { height: 28px; }
   .work-grid { grid-template-columns: 1fr; gap: 36px; }
   .section { padding: 72px 0; }
   .section-sm { padding: 56px 0; }
