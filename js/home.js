@@ -50,7 +50,7 @@
 })();
 
 (function ways() {
-  const order = ['short', 'dicasi', 'video', 'audio'];
+  const order = ['short', 'smart', 'dicasi', 'video', 'audio'];
   $('#ways-grid').innerHTML = order.map((k, i) => {
     const g = GENRES[k];
     return `<a href="works.html?genre=${k}" class="way-card ${i === 0 ? 'is-active' : ''} reveal ${i ? 'd' + Math.min(i, 3) : ''}">

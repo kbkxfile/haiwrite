@@ -30,12 +30,12 @@
 .hall-react span { display: inline-flex; align-items: center; gap: 6px; }
 .hall-react svg { width: 16px; height: 16px; }
 
-/* ---------- four ways (process style) ---------- */
+/* ---------- five ways (process style) ---------- */
 .ways .sec-head { margin-bottom: 64px; }
 .ways-line {
   position: relative; height: 1px; background: var(--line-light);
   max-width: calc(var(--container) + var(--gutter) * 2); margin: 0 auto 40px;
-  display: grid; grid-template-columns: repeat(4, 1fr); padding: 0 var(--gutter);
+  display: grid; grid-template-columns: repeat(5, 1fr); padding: 0 var(--gutter);
 }
 .ways-line::before { content: ''; position: absolute; left: -50vw; right: -50vw; top: 0; height: 1px; background: var(--line-light); }
 .ways-line span {
@@ -43,9 +43,9 @@
   background: var(--deep-2); border: 1px solid rgba(248, 243, 233, .5); transition: all .3s;
 }
 .ways-line span.is-active { background: var(--gold); border-color: var(--gold); box-shadow: 0 0 0 6px rgba(216, 183, 124, .2); }
-.ways-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.ways-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
 .way-card {
-  position: relative; display: flex; flex-direction: column; min-height: 260px; padding: 28px 26px;
+  position: relative; display: flex; flex-direction: column; min-height: 260px; padding: 28px 22px;
   border: 1px solid var(--line-light); border-radius: 0 0 28px 0;
   transition: background .35s var(--ease), color .35s var(--ease), border-color .35s;
 }

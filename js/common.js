@@ -3,7 +3,7 @@
 
 const NAV = [
   { key: 'about',   label: '소개',       href: 'about.html' },
-  { key: 'works',   label: '작품 감상',   href: 'works.html' },
+  { key: 'works',   label: '작품 감상',   href: 'works.html', sub: true },
   { key: 'hall',    label: '명예의 전당', href: 'hall.html' },
   { key: 'academy', label: '아카데미',    href: 'academy.html' },
   { key: 'webzine', label: '웹진',       href: 'webzine.html' },
@@ -64,6 +64,7 @@ function popularity(w) {
 const ICONS = {
   dicasi: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><circle cx="12" cy="12.5" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>',
   short:  '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h5"/></svg>',
+  smart:  '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M10 7h4M10 10.5h4M10 14h2.5M11 18.5h2"/></svg>',
   audio:  '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h4l5 4V6L8 10z"/><path d="M16 9a4 4 0 010 6M18.5 6.5a7.5 7.5 0 010 11"/></svg>',
   video:  '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3z"/></svg>',
   heart:  '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.6-7 10-7 10z"/></svg>',
@@ -119,7 +120,7 @@ function planCards() {
   const u = auth.user();
   const rows = {
     reader: ['모든 작품 감상', '좋아요 · 댓글 참여', '결제 및 구독 관리'],
-    writer: ['모든 작품 감상', '좋아요 · 댓글 참여', '작품 등록 (디카시·숏폼에세이·오디오·영상)', '본인 작품 수정 · 삭제', '명예의 전당 · 웹진 선정 대상']
+    writer: ['모든 작품 감상', '좋아요 · 댓글 참여', '작품 등록 (디카시·숏폼에세이·스마트소설·음성·영상)', '본인 작품 수정 · 삭제', '명예의 전당 · 웹진 선정 대상']
   };
   return Object.entries(PLANS).map(([key, p]) => {
     const current = u && u.plan === key;
@@ -152,7 +153,20 @@ function renderHeader() {
        <a href="subscribe.html" class="btn-sub">${u.plan ? '구독 관리' : '구독하기'}</a>`
     : `<a href="login.html" class="util-link">로그인</a>
        <a href="subscribe.html" class="btn-sub">구독하기</a>`;
-  const links = NAV.map(n => `<a href="${n.href}"${n.key === page ? ' aria-current="page"' : ''}>${n.label}</a>`).join('');
+  const cur = n => n.key === page ? ' aria-current="page"' : '';
+  // 작품 감상 세부 메뉴: 전체 · 장르별 · HAI Essay
+  const subLinks = () => {
+    const now = page === 'works' ? (param('hai') ? 'hai' : param('genre') || 'all') : '';
+    const items = [['all', '전체 작품', 'works.html'],
+      ...Object.entries(GENRES).map(([k, g]) => [k, g.name, 'works.html?genre=' + k]),
+      ['hai', 'HAI Essay', 'works.html?hai=1']];
+    return items.map(([k, label, href]) => `<a href="${href}"${k === now ? ' class="is-on"' : ''}>${label}</a>`).join('');
+  };
+  const links = NAV.map(n => n.sub
+    ? `<div class="gnb-item"><a href="${n.href}"${cur(n)} aria-haspopup="true">${n.label}</a><div class="gnb-sub">${subLinks()}</div></div>`
+    : `<a href="${n.href}"${cur(n)}>${n.label}</a>`).join('');
+  const mobileLinks = NAV.map(n => `<a href="${n.href}"${cur(n)}>${n.label}</a>` +
+    (n.sub ? `<div class="mobile-sub">${subLinks()}</div>` : '')).join('');
 
   const header = document.createElement('header');
   header.className = 'site-header';
@@ -169,7 +183,7 @@ function renderHeader() {
     </div>
     <nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴" hidden>
       <div class="mobile-util">${util}</div>
-      ${links}
+      ${mobileLinks}
     </nav>`;
   const skip = $('.skip-link');
   skip ? skip.after(header) : document.body.prepend(header);

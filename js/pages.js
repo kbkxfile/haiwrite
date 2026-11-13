@@ -88,7 +88,7 @@ const PAGES = {
           <div class="player-bar"><span></span></div>
           <span class="player-time">00:00 / ${w.duration || '00:30'}</span>
         </div>
-        <figcaption>시범 플레이어입니다. 실제 ${w.genre === 'audio' ? '오디오' : '영상'} 파일은 작가 업로드 후 재생됩니다.${w.genre === 'video' ? ' 자막 제공을 함께 검토합니다.' : ''}</figcaption>
+        <figcaption>시범 플레이어입니다. 실제 ${w.genre === 'audio' ? '음성' : '영상'} 파일은 작가 업로드 후 재생됩니다.${w.genre === 'video' ? ' 자막 제공을 함께 검토합니다.' : ''}</figcaption>
       </figure>`;
     }
 
@@ -442,7 +442,7 @@ const PAGES = {
       root.innerHTML = `<div class="form-card" style="margin:0 auto;text-align:center">
         <span class="block-num">WRITER ONLY</span>
         <h1 class="block-title">작품 등록은 작가회원만 가능합니다</h1>
-        <p class="muted" style="margin-bottom:28px">작가회원(월 20,000원)으로 구독하면 디카시·숏폼에세이·오디오·영상문학 작품을 발표하고 관리할 수 있습니다.</p>
+        <p class="muted" style="margin-bottom:28px">작가회원(월 20,000원)으로 구독하면 디카시·숏폼에세이·스마트소설·음성·영상문학 작품을 발표하고 관리할 수 있습니다.</p>
         <div class="btn-row" style="justify-content:center">
           <a href="${u ? 'subscribe.html?plan=writer' : 'login.html?next=' + encodeURIComponent('subscribe.html?plan=writer')}" class="btn btn-gold">작가회원으로 구독하기 ${ICONS.arrow}</a>
           <a href="about.html#hai-model" class="btn btn-line">H-A-I 창작 모델 보기</a>
@@ -464,7 +464,7 @@ const PAGES = {
           <textarea class="textarea" name="body" required placeholder="디카시는 행 단위로, 산문은 문단 사이를 한 줄 띄워 적어 주세요.">${esc(v.body.join('\n'))}</textarea>
           <p class="hint">줄바꿈 한 번이 한 줄(문단)로 표시됩니다.</p>
         </label>
-        <label class="field" id="file-field"><span>대표 이미지 · 오디오 · 영상 파일</span>
+        <label class="field" id="file-field"><span>대표 이미지 · 음성 · 영상 파일</span>
           <input class="input" type="file" name="file" accept="image/*,audio/*,video/*">
           <p class="hint">시범 화면에서는 파일이 업로드되지 않습니다. 실제 서비스에서는 업로드 진행률과 실패 안내가 표시됩니다.</p>
         </label>
